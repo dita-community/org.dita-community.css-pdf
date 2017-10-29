@@ -1,0 +1,14 @@
+<plugin id="org.dita-community.css-pdf">
+  <!-- This plugin uses CSS pagination features
+       to generate PDF from DiTA publications.
+      -->
+
+  <feature extension="package.support.name" value="Eliot Kimber"/>
+  <feature extension="package.support.email" value="ekimber@contrext.com"/>
+
+  <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="dc-css-pdf" type="txt"/>
+  
+      
+</plugin>

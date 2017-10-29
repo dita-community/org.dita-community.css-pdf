@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="org.dita-community.css-pdf">
+
+  <target name="dita2dc-css-pdf" description="Generate PDF from HTML using CSS">
+  </target>
+  
+</project>
