@@ -12,8 +12,8 @@
   
   <feature extension="dita.conductor.transtype.check" value="dc-css-pdf" type="txt"/>
   
-  <feature extension="dita.xsl.xhtml"
-    value="xsl/page-edge-regions.xsl" 
+  <feature extension="dita.xsl.html5"
+    value="xsl/css-pdf.xsl" 
     type="file"
   />
   

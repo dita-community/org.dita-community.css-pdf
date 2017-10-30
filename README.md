@@ -2,6 +2,10 @@
 
 Experimental Open Toolkit plugin that uses HTML + CSS for pagination using any CSS pagination engine (Antenna House, Prince, Vivliostyle, etc.).
 
+Open Toolkit Versions:
+
+- 3.0
+- 
 ## Processing Approach
 
 This transform generates a single-chunk HTML result from the input map, augmented as needed to support paged layout (mostly generating elements to fill running heads and feet).

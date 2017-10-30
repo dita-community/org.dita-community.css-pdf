@@ -9,6 +9,41 @@ html {
   -ah-avoid-widow-words: true;
 } 
 
+/* 
+ * Edge region elements.
+ * 
+ * These populate string variables or
+ * element variables that are then referenced
+ * in edge region rules in @page rules
+ * 
+ * See the CSS Generated Text specification
+ */
+ 
+ runningHeads {
+   font-size: 0pt;
+   width: 0pt;
+   height: 0pt;
+ }
+ 
+ heading1 {
+   position: running(heading1);
+   string-set: heading1 contents;
+ }
+
+ heading2 {
+   position: running(heading2);   
+   string-set: heading2 contents; }
+ 
+ heading3 {
+   position: running(heading3);   
+   string-set: heading3 contents; }
+
+ heading4 {
+   position: running(heading4);   
+   string-set: heading4 contents; 
+}
+
+
  body {
    font-family: "noto-sans", sans-serif;
    font-size: 12pt;   
@@ -26,3 +61,6 @@ html {
    margin-top: 12pt;
  }
  
+ img {
+   object-fit: scale-down;
+ }
