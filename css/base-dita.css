@@ -1,0 +1,28 @@
+/* 
+ * Base CSS for rendering HTML generated from DITA into PDF.
+ * 
+ */
+ 
+html {
+  widows: 3;
+  orphans: 2;
+  -ah-avoid-widow-words: true;
+} 
+
+ body {
+   font-family: "noto-sans", sans-serif;
+   font-size: 12pt;   
+ }
+ 
+
+ 
+ p {
+   margin-top: 12pt;
+ }
+ 
+ /* FIXME: Figure out how to generate "Step. " */
+
+ li.step {
+   margin-top: 12pt;
+ }
+ 

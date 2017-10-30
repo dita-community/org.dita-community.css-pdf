@@ -2,6 +2,18 @@
 <project basedir="." name="org.dita-community.css-pdf">
 
   <target name="dita2dc-css-pdf" description="Generate PDF from HTML using CSS">
+    
+    <property name="page.size" value="a4"/>
+    <property name="doc.style" value="generic"/>
+    
+    <property name="css.filename" value="${doc.style}-${page.size}.css"/>
+    
+    <!--<property name="root-chunk-override" value="to-content"/>-->
+    <antcall target="dita2html5">
+      <param name="args.css" value="css/${css.filename}"/>
+      <param name="args.css.file" value="css/${css.filename}"/>
+      <param name="root-chunk-override" value="to-content"/>
+    </antcall>
   </target>
   
 </project>

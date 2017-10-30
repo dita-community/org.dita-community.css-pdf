@@ -1,0 +1,31 @@
+/* 
+ * A4 page size
+ */
+ 
+@import "base-dita.css";
+
+ @page {
+  size:   210mm 297mm;
+  margin-left: 7.5pc;
+  margin-right: 7.5pc;
+  counter-increment: myPage;
+  counter-reset: footnote;  
+
+  @top-center {
+    font-size: 9pt;
+    content: 'Running head goes here';
+  }
+  
+
+  @bottom-center {
+    content: '-' counter(myPage) '-';
+  }
+
+  @footnote {
+    width: 100%;
+    border-top: 0.5pt solid black;
+    margin-top: 0.5in;
+    border-length: 0.5in;
+  }
+
+ }

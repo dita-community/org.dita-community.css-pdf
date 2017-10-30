@@ -5,10 +5,35 @@
 
   <feature extension="package.support.name" value="Eliot Kimber"/>
   <feature extension="package.support.email" value="ekimber@contrext.com"/>
+  
+  <require plugin="org.dita.html5"/> 
 
   <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
   
   <feature extension="dita.conductor.transtype.check" value="dc-css-pdf" type="txt"/>
+  
+  <feature extension="dita.xsl.xhtml"
+    value="xsl/page-edge-regions.xsl" 
+    type="file"
+  />
+  
+  <transtype name="dc-css-pdf" desc="PDF using CSS pagination" extends="html5">
+    <param name="page.size" desc="Page size, e.g. 'a4', 'us-letter', '6x9'" type="string">
+      <val default="true">a4</val>
+    </param>
+    <param name="doc.style" desc="The overall document style, e.g. 'generic', 'large-type', etc." type="string">
+      <val default="true">generic</val>
+    </param>
+    <param name="pdf.formatter" desc="Specifies the CSS pagination formatter" type="enum">
+      <val default="true">browser</val>
+      <val>ah</val>
+      <val>prince</val>
+      <val>vivliostyle</val>
+      <val>pdfreactor</val>
+    </param>
+    
+  </transtype>
+    
   
       
 </plugin>
