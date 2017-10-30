@@ -18,6 +18,7 @@
     <main role="main">
       <!-- Override -->
       <xsl:call-template name="css:front-cover"/>      
+      <xsl:call-template name="css:generate-main-toc"/>      
       <article role="article">
         <xsl:attribute name="aria-labelledby">
           <xsl:apply-templates select="*[contains(@class,' topic/title ')] |

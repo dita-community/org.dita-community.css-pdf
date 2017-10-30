@@ -196,6 +196,103 @@
  }
  
 
+ @page frontmatter :left {
+
+  @top-left {
+    font-size: 9pt;
+    content: "Heading 1: " /*string(heading1)*/;
+    background-color: pink;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+
+  @top-center {
+    font-size: 9pt;
+    background-color: green;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+  
+  @top-right {
+    font-size: 9pt;
+    content: "Heading 2: " /*string(heading2)*/;
+    background-color: yellow;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+
+  @bottom-left {
+    content: 'Page ' counter(myPage i);
+    vertical-align: top;
+    border-top: 1pt black solid;
+    margin-top: 15mm;
+    padding-top: 2mm;
+  }
+
+  @left-middle {
+    content: 'Edge Text';
+    background-color: tan;
+    margin-right: 3pc;
+/*    transform: rotate(-90deg);*/
+  }
+
+ }
+ 
+ @page frontmatter :right {
+
+  @top-right {
+    font-size: 9pt;
+    content: "Heading 1: " /*string(heading1)*/;
+    background-color: pink;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+
+  @top-center {
+    font-size: 9pt;
+    background-color: green;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+  
+  @top-left {
+    font-size: 9pt;
+    content: "Heading 2: " /*string(heading2)*/;
+    background-color: yellow;
+    vertical-align: bottom;
+    padding: 2mm;
+    border-bottom: 2pt blue solid;
+    margin-bottom: 10mm;
+  }
+
+  @bottom-right {
+    content: 'Page ' counter(myPage i);
+    vertical-align: top;
+    border-top: 1pt black solid;
+    margin-top: 15mm;
+    padding-top: 2mm;
+    background-color: yellow;
+  }
+
+  @right-middle {
+    content: 'Edge Text';
+    background-color: tan;
+    margin-left: 3pc;
+/*    transform: rotate(-90deg);*/
+  }
+
+ }
+ 
 /*
  * ============================ 
  * Covers
@@ -233,6 +330,7 @@ article.front-cover > .topicmeta
   bottom: 1pt;
   right: 1pt;
 }
+
 article.front-cover  .publisher:before 
 {
   content: "Publisher: ";
@@ -246,3 +344,19 @@ article.back-cover {
   page: back-cover;
 } 
 
+/*
+ * ============================ 
+ * ToC
+ * ============================
+ */ 
+ 
+article.main-toc {
+  page: frontmatter;
+  break-before: right;
+  break-after: right;
+  page-break-before: right;
+  page-break-after: right;
+  page: front-cover;
+  counter-reset: myPage;  
+
+} 
