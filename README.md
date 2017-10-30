@@ -16,4 +16,14 @@ Transtype name: dc-css-pdf
 
 ### Options
 
-- TBD
+- page.size: Specifies the page size, e.g. "a4", "us-letter", "6x9". 
+- doc.style: The overall document style, e.g. "generic", "large-type", etc.
+
+The page.size and doc.style values are combined to construct the name of the top-level CSS file.
+
+- pdf.formatter: The PDF formatter to target, one of:
+  - ah: Antenna House Formatter
+  - prince: Prince
+  - vivliostyle: Vivliostyle renderer
+  - pdfreactor: PDF Reactor engine
+  - browser: No specific formatter (open generated HTML in browser)
