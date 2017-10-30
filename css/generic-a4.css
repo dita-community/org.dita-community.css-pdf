@@ -20,6 +20,85 @@
 
 }
  
+ @page:blank {
+  size:   210mm 297mm;
+  margin-left: 6pc;
+  margin-right: 6pc;
+  counter-increment: myPage;
+  counter-reset: footnote;  
+
+
+  @top-left {
+    content: '\a0';
+  }
+  @top-right {
+    content: '\a0';
+  }
+  @bottom-left {
+    content: '\a0';
+  }
+  @bottom-right {
+    content: '\a0';
+  }
+  @left-middle {
+    content: '\a0';
+  }
+  @right-middle {
+    content: '\a0';
+  }
+}
+@page front-cover {
+  size:   210mm 297mm;
+  margin-left: 2pc;  
+  margin-right: 2pc;  
+  margin-top: 2pc;  
+  margin-bottom: 2pc;  
+  @top-left {
+    content: '\a0';
+  }
+  @top-right {
+    content: '\a0';
+  }
+  @bottom-left {
+    content: '\a0';
+  }
+  @bottom-right {
+    content: '\a0';
+  }
+  @left-middle {
+    content: '\a0';
+  }
+  @right-middle {
+    content: '\a0';
+  }
+} 
+ 
+@page back-cover {
+  size:   210mm 297mm;
+  margin-left: 2pc;  
+  margin-right: 2pc;  
+  margin-top: 2pc;  
+  margin-bottom: 2pc;  
+  @top-left {
+    content: '\a0';
+  }
+  @top-right {
+    content: '\a0';
+  }
+  @bottom-left {
+    content: '\a0';
+  }
+  @bottom-right {
+    content: '\a0';
+  }
+  @left-middle {
+    content: '\a0';
+  }
+  @right-middle {
+    content: '\a0';
+  }
+} 
+  
  @page:left {
 
   @top-left {
@@ -116,3 +195,54 @@
 
  }
  
+
+/*
+ * ============================ 
+ * Covers
+ * ============================
+ */ 
+ 
+article.front-cover {
+  break-after: right;
+  page-break-after: right;
+  page: front-cover;
+} 
+
+article.front-cover .publication-title
+{
+  font-size: 42pt;
+  font-weight: bold;
+  display: block;
+  margin-top: 2in;
+  margin-left: 2in;
+  margin-bottom: 3in;  
+}
+
+
+article.front-cover > .author:before 
+{
+  content: "By: ";
+  display: inline;
+  font-weight: bold;
+}
+
+article.front-cover > .topicmeta 
+{
+  display: block;
+  position: absolute;
+  bottom: 1pt;
+  right: 1pt;
+}
+article.front-cover  .publisher:before 
+{
+  content: "Publisher: ";
+  display: inline;
+  font-weight: bold;
+}
+
+article.back-cover {
+  break-before: left;
+  page-break-before: left;
+  page: back-cover;
+} 
+

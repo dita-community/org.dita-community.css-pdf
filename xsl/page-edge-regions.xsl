@@ -37,7 +37,7 @@
   <xsl:template mode="css:edge-region-content" match="*[contains(@class, ' topic/title ')]">
     <xsl:param name="doDebug" as="xs:boolean" tunnel="yes" select="false()"/>
     
-    <xsl:variable name="doDebug" as="xs:boolean" select="true()"/>
+<!--    <xsl:variable name="doDebug" as="xs:boolean" select="true()"/>-->
     
     <xsl:if test="$doDebug">
       <xsl:message> + [DEBUG] css:edge-region-content: ancestors:</xsl:message>
